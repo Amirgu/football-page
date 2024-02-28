@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Football Forecast: A Profitable Model For Predicting the Over/Under Market in Football">
+  <meta name="keywords" content="Vision-Language Grounding, Manipulation, Generative AI, StableDiffusion, ROSO">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Football Project</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4Y34PZ3XBE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-4Y34PZ3XBE');
+  </script>
+<style>
+ 
+
+</style>
+  <script>
+    function updateSingleVideo() {
+      var demo = document.getElementById("single-menu-demos").value;
+      var task = document.getElementById("single-menu-tasks").value;
+      var inst = document.getElementById("single-menu-instances").value;
+
+      console.log("single", demo, task, inst)
+
+      var video = document.getElementById("single-task-result-video");
+      video.src = "https://cliport.github.io/media/results_web/" + 
+                  task + 
+                  "-two_stream_full_clip_lingunet_lat_transporter-n" + 
+                  demo + 
+                  "-train/videos/" + 
+                  task +
+                  "-0000" + 
+                  inst + 
+                  ".mp4";
+      video.playbackRate = 2.0;
+      video.play();
+    }
+
+    function updateMultiVideo() {
+      var demo = document.getElementById("multi-menu-demos").value;
+      var task = document.getElementById("multi-menu-tasks").value;
+      var inst = document.getElementById("multi-menu-instances").value;
+
+      console.log("multi", demo, task, inst)
+
+      var video = document.getElementById("multi-task-result-video");
+      video.src = "https://cliport.github.io/media/results_web/" + 
+                  task + 
+                  "-two_stream_full_clip_lingunet_lat_transporter-n" + 
+                  demo + 
+                  "-train/videos/multi-language-conditioned-" + 
+                  task +
+                  "-0000" + 
+                  inst + 
+                  ".mp4";
+      video.playbackRate = 2.0;
+      video.play();
+    }
+
+  </script>
+
+
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Unofficial Python Implementation: A Profitable Model For Predicting the Over/Under Market in Football</h1>
+          <h3 class="title is-4 conference-authors"><a target="_blank" href="https://www.araa.asn.au/conference/acra-2023/"></a></h3>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a target="_blank" href="https://www.linkedin.com/in/yusuke-miyashita-79a3771a5/">Amine Rguig
+              </a>(Implementation) 
+              <a target="_blank" href="https://www.linkedin.com/in/yusuke-miyashita-79a3771a5/">Edward Weathcroft</a>(Paper) </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Université Paris-Dauphine</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a target="_blank" href="https://eprints.lse.ac.uk/103712/1/Predict_total_goals_LSE.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+<!--               <span class="link-block">
+                <a target="_blank" href="https://drive.google.com/file/d/1xzG5e1XF958HPuD_FZTiKROd9AQyd1fS/view?usp=sharing"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span> -->
+              <!-- Video Link. -->
+              
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a target="_blank" href="https://github.com/Amirgu/Football-Betting"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="hero teaser">
+  <div class="container is-fullhd">
+    <div class="hero-body">
+      <div class="has-text-centered">
+      <video id="teaser" autoplay muted loop width="720" height="405">
+        <source src="https://yusuke710.github.io/roso.github.io/media/videos/abstract_video.mp4"
+                type="video/mp4">
+      </video>
+      </div>
+      <h2 class="subtitle has-text-centered">
+      </br>
+        <span class="dcliport">ROSO</span> uses stable diffusion to pre-process a
+        robot’s observation of novel objects during in-
+        ference time to fit within its distribution of
+        observations of the pre-trained policies.
+      </h2>
+    </div>
+  </div>
+</section> -->
+
+<!--
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop height="100%">
+            <source src="https://cliport.github.io/media/videos/1_folding.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop height="100%">
+            <source src="https://cliport.github.io/media/videos/4_chess.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop height="100%">
+            <source src="https://cliport.github.io/media/videos/3_packing.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop height="100%">
+            <source src="https://cliport.github.io/media/videos/6_sweeping.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop height="100%">
+            <source src="https://cliport.github.io/media/videos/9_cherry.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop height="100%">
+            <source src="https://cliport.github.io/media/videos/7_reading.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+       <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop height="100%">
+            <source src="https://cliport.github.io/media/videos/2_bowl.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop height="100%">
+            <source src="https://cliport.github.io/media/videos/8_rope.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop height="100%">
+            <source src="https://cliport.github.io/media/videos/5_stacking.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<h2 class="subtitle has-text-centered">
+</br>
+  We learn <b>one multi-task policy</b> for 9 real-world tasks including folding cloths, sweeping beans etc. with just <b>179</b> image-action training pairs.
+</h2>
+-->
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>Predicting sport events has always been a popular domain. 
+            Not only because of the degree of uncertainty and excitement 
+            but also due to possibility of winning money by betting. 
+            Soccer, the most popular sport in the world, remains an 
+            especially attractive topic for predicting matches outcomes.</p>
+    
+          <p>
+            There are many works focusing on using classical approaches when 
+            predicting outcomes of the matches—using SVMs, 
+            trees, logistic regressions, NNs, etc. 
+            However, they usually do not respect the natural time ordering of the matches, 
+            since it might be actually quite problematic to properly grasp this concept.
+            </p>
+
+            <p>In this post, I will model predictions for Over or Under 2.5 Goals in a league by implementing a research paper from scratch and utilizing handmade features such as GAP Ratings.</p>
+          
+        </div>
+      </div>
+    </div>
+    
+    <!--/ Abstract. -->
+
+  </div>
+
+  <!-- Paper image. -->
+  <br>
+  <br>
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-two-thirds">
+      <img src="media\images\zidane.webp" alt="Your Image Description" style="max-width: 60%;">
+    </div>
+  </div>
+  <!--/ Paper image. -->
+
+    <!-- Paper video. -->
+    <!-- </br>
+    </br>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-two-thirds">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe width="420" height="236" src="https://www.youtube.com/embed/4EA-Et0h5nU?si=j5_B-aIdA9GfwAPm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div> -->
+
+</section>
+
+<section class="section">
+  <div class="container is-max-widescreen">
+
+    <div class="rows">
+
+
+    <!-- Animation. -->
+    <div class="rows is-centered">
+      <div class="row is-full-width">
+        <h2 class="title is-3">Introduction</h2>
+       <p> Predicting (forecasting) a value in the future is connected with many problems. The accuracy of prediction is influenced by several key factors—quality of historical data available, amount of historical data available, forecasted target horizon, available features, and of course the nature of problem itself.</p>
+<br>
+<p> Forecasting differs from other ML approaches as there are often not enough data points. For example, when forecasting in a day’s timeframe, even if we have several years of historical data available, it is still mere hundreds or thousands of data points, a very small dataset, prompting many to dismiss it as NNs would not work on such small amount of data points. Further, if we increase the forecasting interval to weeks or months, then the number of data points decreases even more drastically.</p>
+<br>
+<p>Generally speaking, time series also have another unique property; they are often non stationary. This means that their mean changes over time—they can be composed of seasonality, trends or cycles, etc. A once trained model probably will not work for a long period of time and will require to be retrained frequently.
+</p>
+<br>
+<p>This suggests that forecasting can be quite tricky and difficult.</p> 
+<br>
+        <!-- Interpolating. -->
+        <h3 class="title is-3">General Attacking Performance (GAP Rating)</h3>
+        <div class="content has-text-justified">
+          <p>
+            The Generalized Attacking Performance (GAP) rating is a pivotal metric in football analytics, providing a standardized approach to evaluate the offensive and defensive strengths of teams within a league. This paper delineates the GAP rating system for a football league with N unique teams, each participating in a series of matches throughout the season. The primary data for the GAP rating are the attacking outputs of the home team (\( S_h \)) and the away team (\( S_a \)) in each match. These outputs are calculated from match statistics such as <strong>goals scored</strong>, <strong>shots</strong>, <strong>shots on target</strong>, and <strong>corners</strong>, offering insights into the teams' dynamics and efficiency.
+          </p>
+          <!-- MathJax scripts for rendering mathematical expressions -->
+          <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+          <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+          <p>
+            The GAP rating system assigns individual scores for attacking and defensive performance in both home and away contexts. Each team receives four distinct ratings:
+            <ul>
+              <li>\( H_{i}^{a} \): Home attacking GAP rating for the \( i^{th} \) team</li>
+              <li>\( H_{i}^{d} \): Home defensive GAP rating for the \( i^{th} \) team</li>
+              <li>\( A_{i}^{a} \): Away attacking GAP rating for the \( i^{th} \) team</li>
+              <li>\( A_{i}^{d} \): Away defensive GAP rating for the \( i^{th} \) team</li>
+            </ul>
+          </p>
+          <p>
+            These ratings are integral for analyzing team performance and developing predictive models for future matches. By establishing a formal process for calculating GAP ratings, this paper enhances the field of football analytics and the prediction of team performance across different leagues.
+          </p>
+          <p>
+            Attacking GAP ratings approximate the expected offensive output of a team against an average league team, 
+            while defensive ratings estimate the expected offensive performance by an average opponent. 
+            Top-tier teams typically exhibit high attacking and low defensive ratings. 
+          </p>
+          <!-- Mathematical expressions for GAP rating updates -->
+          <!-- <span>\[ H_{i}^{a} = \max(H_{i}^{a} + \lambda \phi_{1}(S_{h} - \frac{H_{i}^{a} + A_{j}^{d}}{2}),    0) \]</span>
+          <span>\[ A_{i}^{a} = \max(A_{i}^{a} + \lambda(1 - \phi_{1})(S_{h} - \frac{H_{i}^{a} + A_{j}^{d}}{2}),   0) \]</span>
+          <span>\[ H_{i}^{d} = \max(H_{i}^{d} + \lambda \phi_{1}(S_{a} - \frac{A_{j}^{a} + H_{i}^{d}}{2}), 0) \]</span>
+          <span>\[ A_{i}^{d} = \max(A_{i}^{d} + \lambda(1 - \phi_{1})(S_{a} - \frac{A_{j}^{a} + H_{i}^{d}}{2}), 0) \]</span>
+          <span>The GAP ratings for the \( j^{th} \) team (away to the \( i^{th} \) team) are updated as follows:</span>
+          <span>\[ A_{j}^{a} = \max(A_{j}^{a} + \lambda \phi_{2}(S_{a} -  \frac{A_{j}^{a} + H_{i}^{d}}{2}), 0) \]</span>
+          <span>\[ H_{j}^{a} = \max(H_{j}^{a} + \lambda(1 - \phi_{2})(S_{a} - \frac{A_{j}^{a} + H_{i}^{d}}{2}), 0) \]</span>
+          <span>\[ A_{j}^{d} = \max(A_{j}^{d} + \lambda \phi_{2}(S_{h} - \frac{H_{i}^{a} + A_{j}^{d}}{2}), 0) \]</span>
+          <span>\[ H_{j}^{d} = \max(H_{j}^{d} + \lambda(1 - \phi_{2})(S_{h} - \frac{H_{i}^{a} + A_{j}^{d}}{2}), 0) \]</span>
+          <br> -->
+          <p>Access the <button onclick="toggleCode()">code</button> used to update the ratings below:</p>
+          <div id="codeSnippet" style="display: none;">
+              <pre><code>
+                def UpdateGamei(params, i, teams, data, mode="G"):
+                """"" 
+                Updating Ratings of a Team following Game number j 
+            
+                Lambda,phi1,phi2: Parametre of ratings
+                team_names: Dictionary of Team names
+                i: Number of the Game
+                teams: list of teams (from Class Teams)
+                dataset: list of games 
+                mode: mode of the measure of performance used:
+                'G' if goals scored by either teams,
+                'S+C' for Shots on target and Corners
+                'G+S+C': for goals + shots on target+ corners  
+                
+                """ ""
+                lam, phi_1, phi_2 = params
+                team_names = data.team_names()
+                dataset = data.data
+                Home = dataset[i]["HomeTeam"]  # Home Team name
+                Away = dataset[i]["AwayTeam"]  # Away Team name
+            
+                if mode == "G":
+            
+                    Sh = int(dataset[i]["FTHG"])  # Goals Scored By The home team
+                    Sa = int(dataset[i]["FTAG"])  # Goals Scored By The Away team
+            
+                elif mode == "S+C":
+            
+                    Sh = (
+                        int(dataset[i]["HST"]) + int(dataset[i]["HC"]) / 3
+                    )  # Corners + Shots Home
+                    Sa = (
+                        int(dataset[i]["AST"]) + int(dataset[i]["AC"]) / 3
+                    )  # Corners + Shots Away
+            
+                elif mode == "G+S+C":
+            
+                    Sh = (
+                        1.2 * int(dataset[i]["FTHG"])
+                        + int(dataset[i]["HST"]) / 4
+                        + int(dataset[i]["HC"]) / 5
+                    )
+                    Sa = (
+                        1.2 * int(dataset[i]["FTAG"])
+                        + int(dataset[i]["AST"]) / 4
+                        + int(dataset[i]["AC"]) / 5
+                    )
+            
+                jh = (
+                    int([k for k in range(1, 21) if team_names[k] == Home][0]) - 1
+                )  # index of the home team
+            
+                ja = (
+                    int([k for k in range(1, 21) if team_names[k] == Away][0]) - 1
+                )  # index of the away team
+            
+                a, b, c, d = teams[jh].get()  # Current Home Ratings
+                u, v, x, y = teams[ja].get()  # Current Away Ratings
+            
+                # HOME UPDATES  :
+            
+                a_new = max(a + lam * phi_1 * (Sh - 0.5 * (a + y)), 0)  # HA
+            
+                c_new = max(c + lam * (1 - phi_1) * (Sh - 0.5 * (a + y)), 0)  # AA
+            
+                b_new = max(b + lam * phi_1 * (Sa - 0.5 * (x + b)), 0)  # HD
+            
+                d_new = max(d + lam * (1 - phi_1) * (Sa - 0.5 * (x + b)), 0)  # AD
+            
+                # AWAY UPDATES :
+            
+                x_new = max(x + lam * phi_2 * (Sa - 0.5 * (x + b)), 0)  # AA
+            
+                u_new = max(u + lam * (1 - phi_2) * (Sa - 0.5 * (x + b)), 0)  # HA
+            
+                y_new = max(y + lam * phi_2 * (Sh - 0.5 * (a + y)), 0)  # AD
+            
+                v_new = max(v + lam * (1 - phi_2) * (Sh - 0.5 * (a + y)), 0)  # HD
+            
+                a, b, c, d = a_new, b_new, c_new, d_new
+                u, v, x, y = u_new, v_new, x_new, y_new
+                teams[jh].update(a, b, c, d)
+                teams[ja].update(u, v, x, y)
+              </code></pre>
+          </div>
+          <script>
+              function toggleCode() {
+                  var codeSnippet = document.getElementById("codeSnippet");
+                  if (codeSnippet.style.display === "none") {
+                      codeSnippet.style.display = "block";
+                  } else {
+                      codeSnippet.style.display = "none";
+                  }
+              }
+          </script>
+        <h3 class="title is-4">Example</h3>
+        <div class="content has-text-justified">
+          <p> Here we analyze the Attacking Ratings, considering a combination of Goals, Shots, and Corners, for both the Arsenal and Man City teams. It's worth recalling that Arsenal led the rankings for much of the previous season but ultimately lost the championship to Man City in the final matches. Our examination reveals a consistent superiority in attacking prowess for Man City throughout the entire season. Conversely, Arsenal's attacking performance fluctuated, contributing to their eventual loss of the season. </p>
+          <div align="center">
+              <img src="media\images\ratings_comparaison.png" class="interpolation-image" 
+              alt="Interpolate start reference image." style="max-width: 80%;"/>
+          </div>
+      </div>
+         <!-- <br/>
+        <!-- <p>The GAP rating system described above has some similarities to, and, to
+          some extent, is inspired by, the pi-rating system defined in Constantinou &
+          Fenton (2013). Some of the similarities between the two ratings systems are
+          described below:</p>
+          
+          <ol>
+            
+              <br>
+              <li> <p>The parameter λ performs the same function as for both GAP ratings and pi-ratings. The Elo rating system also has a similar learning
+              parameter.</p>
+            </li>
+            
+              <br>
+              <li> <p>Both GAP ratings and pi-ratings consist of separate home and away
+              ratings for each team (in order to account for the impact of home
+              advantage).</p>
+            </li>
+            
+              <br>
+              <li> <p>In GAP ratings, the parameters φ<sub>1</sub> and φ<sub>2</sub> govern the impact of a home
+              match on a team’s away ratings and the impact of an away match on a
+              team’s home rating respectively. In the pi-rating system, a parameter
+              γ is defined with a similar function which serves both purposes (it is
+              necessary for the one parameter to serve both purposes to ensure that
+              the sum of the ratings over the entire league remains zero).</p>
+            </li>
+            
+              <br>
+              <li> <p>A pi-rating can roughly be interpreted as a team’s expected winning
+              (or losing) margin over an average team in a league. GAP ratings can
+              similarly be interpreted as the expected number of attacking plays (as
+              defined) of a team against an average opponent.</p>
+            </li>
+          </ol>
+          <br> -->
+          
+      </div>
+    </div>
+    
+    
+    
+        <!-- <div class="content has-text-centered">
+        <video id="pipeline" 
+        controls
+        muted
+        autoplay
+        loop
+        width="80%">
+          <source src="https://yusuke710.github.io/roso.github.io/media/videos/pipeline.mp4"
+                  type="video/mp4">
+        </video>
+        <br/>
+        <br/>
+            <b>Video 3:</b>  ROSO intercepts the observations(prompt and image, on the left) to produce synthetic observations that are closer to previously seen ones, before feeding them into a pre-trained policy.
+        <br/>
+        </div>
+        <br/>
+        <br/> -->
+        <!--/ Interpolating. -->
+
+        <h3 class="title is-3">Forecasting model</h3>
+        <div class="content has-text-justified">
+          <p>
+            <p>Here, an approach to using GAP ratings to predict the probability that there
+              will be three or more goals in the match is described. Although a variety
+              of approaches could be taken to do this, in this paper, a simple logistic
+              regression approach is taken, allowing for multiple variables to influence the
+              estimated probability. Let \( y = \log\left(\frac{\hat{p}}{1-\hat{p}}\right) \) where \( \hat{p} \) is the estimated probability
+              of the total number of goals exceeding 2.5. A regression model is defined as:
+              \[ \hat{y} = \hat{\alpha} + \hat{\beta}_1(H_{ai} + H_{di} + A_{ai} + A_{di}) + \hat{\beta}_2r_i \]
+              where \( r_i = \frac{1}{o_i} \) is the odds implied probability (which may be derived from a
+              single bookmaker or averaged over several). The parameters are estimated
+              using least squares estimation. From \( \hat{y} \), the estimated probability \( \hat{p} \) can easily
+              be derived.</p>
+        </div>
+        <!-- <div align="center">
+        <img src="https://yusuke710.github.io/roso.github.io/media/images/SD_objects.PNG" class="interpolation-image" 
+         alt="Interpolate start reference image." style="max-width: 80%;"/>
+        </div> -->
+         <!-- <br/>
+        <br/>
+            <b>Figure 3:</b>  Examples of inpainting various seen objects (from the CLIPort training data) replacing an unseen objects (the dinosaur figure in the top-left image).
+        <br/>
+        <br/> -->
+
+        <!-- Re-rendering. -->
+        <h3 class="title is-3">Gambling techniques and Optimisation</h3>
+        <div class="content has-text-justified">
+          <p>The strategy described here makes use of the Kelly Criterion (Kelly Jr (1956)).</p>
+
+          <p>Under the Kelly criterion, the proportion of one’s wealth placed on a particular outcome is given by:</p>
+          \[ f = \max\left(\frac{rp - 1}{r - 1}, 0\right) \]
+          
+          <p>where \( p \) is the gambler’s estimated probability of the outcome and \( r \) is the decimal odds offered by the bookmaker. If the forecast probability is less than the odds-implied probability, the bet is not taken since the stake is zero.</p>
+          
+          <p>The idea behind the Kelly criterion is that the bankroll of the gambler ‘grows’ over time by increasing the stake proportionally to their bank. 
+            However, in this paper, the approach of Boshnakov et al. (2017) is taken, in which equation 4 is always taken as a proportion of 1 and therefore does not depend on the bankroll. 
+            Each stake is multiplied by a constant such that the average stake when a bet is taken is exactly 1. 
+            This is done in order to reduce the risk of bankrupcy, as its hard to win many consecutive games with our model. </p>
+          
+        </div>
+        <!-- <div class="content has-text-centered">
+          <video id="CLIPort-gif"
+                 controls
+                 muted
+                 autoplay
+                 loop
+                 width="80%">
+            <source src="https://cliport.github.io/media/videos/10sim_web_teaser.mp4"
+                    type="video/mp4">
+          </video>
+          <p>
+          Credit: <a href="https://cliport.github.io/">Shridhar et. al (University of Washington)</a>
+          </p>
+        </div> -->
+        <!--
+        <br/>
+            <b>Paradigm 2:</b> TransporterNets takes an <a target="_blank" href="https://en.wikipedia.org/wiki/Ecological_psychology">action-centric approach</a> to perception where the objective is to <i>detect actions</i> rather than <i>detect objects</i> and then learn a policy. Keeping the action-space grounded in the perceptual input allows us to exploit geometric symmetries for efficient representation learning. 
+            When combined with CLIP's pre-trained representations, this enables the learning of reusable manipulation skills without any "objectness" assumptions.
+        <br/>
+        -->
+        <!-- <br/>
+        <br/> -->
+
+        <!--/ Re-rendering. -->
+
+        <h2 class="title is-3">Results</h2>
+        <div class="content has-text-justified">
+          <p>In addition to assessing the precision and accuracy of our forecasts, it's imperative to ensure that our model generates probabilities that closely align with real-world outcomes. To achieve this, we introduce the ignorance score as a crucial metric. The ignorance score serves as a vital tool, commonly utilized in weather forecasting. It provides insight into the extent to which our model's predictions approximate what is known as climatology—the historical distribution of events. By monitoring the ignorance score and striving for alignment with climatological patterns, we enhance the reliability and robustness of our predictive model, thereby ensuring its effectiveness in practical applications.</p>
+          <p> 
+            We conducted testing on our model and methodology across three seasons, focusing on two prominent leagues: the Italian Serie A and the English Premier League.
+          </p>
+            <p>
+            Our observations reveal that the model's accuracy ranges from 50% to 65%. Notably, the easiest season to predict was the 2023/2024 season of the Premier League, achieving a remarkable 65% accuracy. This level of accuracy is considered quite commendable for this type of forecasting.
+            </p>
+           <p>
+            Additionally, we found that our Log Loss closely aligns with log(1/2), which is positive news as, on average, Over 2.5 Goals occur 50% of the time. This indicates that the model's predictions reflect the reality over extended periods.
+          </p> 
+          <p>
+            Furthermore, our profit has consistently remained positive across all leagues and seasons, which is encouraging. Specifically, the Premier League generates an average profit of 20% per season, while Serie A yields an average profit of 10% per season. These results underscore the effectiveness of our model and its ability to generate favorable outcomes consistently. 
+          </p>
+          <br>
+          <div align="center">
+            <img src="media\images\tableau.png" class="interpolation-image" 
+             alt="Interpolate start reference image." style="max-width: 80%;"/>
+          </div>
+          <br>
+          <p>Here we present an overview comparison of the graphs for the profit generated by the Kelly strategy throughout the three seasons for both the Serie A and the Premier League.</p>
+          <p>For the Premier League, the profit is around 60% for the three seasons, and for Serie A, the profit is around 40%.</p>
+          
+          <!-- <p>To test our the quality of our forecast, hence the quality of the probabilities generated by our, we want 
+            to track our profit after performing a simulation where we bet after for each round of the premier league
+          </p> -->
+          <!-- <p>
+            We tested our kelly betting strategy across three consecutive years from the season 2021/2022 of the premier league , until this season 2023/2024,
+            We found that we made consistent profit along those three years, averaging 20% of profit each year, and 60 % across the three years
+          </p> -->
+          <div align="center">
+            <img src="media\images\total_profit.png" class="interpolation-image" 
+             alt="Interpolate start reference image." style="max-width: 80%;"/>
+          </div>
+
+          <p>
+          
+
+          
+        <!-- </div>
+        <figure>
+          <img src="https://yusuke710.github.io/roso.github.io/media/images/result.png" alt="Image Description">
+          <figcaption>100 variations are run for each task (where <span style="color: red;">x</span> is varied). The number of failed runs significantly drops when
+            using our synthetic data during inference, approaching the success rate on the training set (first column)</figcaption>
+        </figure>
+        <br/>
+        <br/> -->
+
+
+        <!--
+        <div class="columns">
+          <div class="column has-text-centered">
+            <h3 class="title is-5">Single-Task Models</h3>
+
+            Trained with
+            <div class="select is-small">
+              <select id="single-menu-demos" onchange="updateSingleVideo()">
+              <option value="1">1</option>
+              <option value="10">10</option>
+              <option value="100">100</option>
+              <option value="1000" selected="selected">1000</option>
+              </select>
+            </div>
+            demos, evaluated on 
+            <div class="select is-small">     
+              <select id="single-menu-tasks" onchange="updateSingleVideo()">
+              <option value="align-rope">align-rope</option>
+              <option value="assembling-kits-seq-seen-colors">assembling-kits-seq-seen-colors</option>
+              <option value="assembling-kits-seq-unseen-colors">assembling-kits-seq-unseen-colors</option>
+              <option value="packing-boxes-pairs-seen-colors">packing-boxes-pairs-seen-colors</option>
+              <option value="packing-boxes-pairs-unseen-colors">packing-boxes-pairs-unseen-colors</option>
+              <option value="packing-seen-google-objects-seq" selected="selected">packing-seen-google-objects-seq</option>
+              <option value="packing-unseen-google-objects-seq">packing-unseen-google-objects-seq</option>
+              <option value="packing-seen-google-objects-group">packing-seen-google-objects-group</option>
+              <option value="packing-unseen-google-objects-group">packing-unseen-google-objects-group</option>
+              <option value="packing-shapes">packing-shapes</option>
+              <option value="put-block-in-bowl-seen-colors">put-block-in-bowl-seen-colors</option>
+              <option value="put-block-in-bowl-unseen-colors">put-block-in-bowl-unseen-colors</option>
+              <option value="separating-piles-seen-colors">separating-piles-seen-colors</option>
+              <option value="separating-piles-unseen-colors">separating-piles-unseen-colors</option>
+              <option value="stack-block-pyramid-seq-seen-colors">stack-block-pyramid-seq-seen-colors</option>
+              <option value="stack-block-pyramid-seq-unseen-colors">stack-block-pyramid-seq-unseen-colors</option>
+              <option value="towers-of-hanoi-seq-seen-colors">towers-of-hanoi-seq-seen-colors</option>
+              <option value="towers-of-hanoi-seq-unseen-colors">towers-of-hanoi-seq-unseen-colors</option>
+              </select>
+            </div>
+            instance
+            <div class="select is-small">
+              <select id="single-menu-instances" onchange="updateSingleVideo()">
+              <option value="01">01</option>
+              <option value="02">02</option>
+              <option value="03">03</option>
+              <option value="04">04</option>
+              <option value="05" selected="selected">05</option>
+              </select>
+            </div>
+            <br/>
+            <br/>
+
+            <video id="single-task-result-video"
+                   controls
+                   muted
+                   autoplay
+                   loop
+                   width="100%">
+              <source src="https://cliport.github.io/media/results_web/packing-seen-google-objects-seq-two_stream_full_clip_lingunet_lat_transporter-n1000-train/videos/packing-seen-google-objects-seq-000005.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+
+          <div class="column has-text-centered">
+            <h3 class="title is-5">One Multi-Task Model</h3>
+            
+            Trained with
+            <div class="select is-small">
+              <select id="multi-menu-demos" onchange="updateMultiVideo()">
+              <option value="1">1 T</option>
+              <option value="10">10 T</option>
+              <option value="100">100 T</option>
+              <option value="1000" selected="selected">1000 T</option>
+              </select>
+            </div>
+            demos, evaluated on  
+            <div class="select is-small">   
+              <select id="multi-menu-tasks" onchange="updateMultiVideo()">
+              <option value="align-rope">align-rope</option>
+              <option value="assembling-kits-seq-seen-colors">assembling-kits-seq-seen-colors</option>
+              <option value="assembling-kits-seq-unseen-colors">assembling-kits-seq-unseen-colors</option>
+              <option value="packing-boxes-pairs-seen-colors" selected="selected">packing-boxes-pairs-seen-colors</option>
+              <option value="packing-boxes-pairs-unseen-colors">packing-boxes-pairs-unseen-colors</option>
+              <option value="packing-seen-google-objects-seq">packing-seen-google-objects-seq</option>
+              <option value="packing-unseen-google-objects-seq">packing-unseen-google-objects-seq</option>
+              <option value="packing-seen-google-objects-group">packing-seen-google-objects-group</option>
+              <option value="packing-unseen-google-objects-group">packing-unseen-google-objects-group</option>
+              <option value="packing-shapes">packing-shapes</option>
+              <option value="put-block-in-bowl-seen-colors">put-block-in-bowl-seen-colors</option>
+              <option value="put-block-in-bowl-unseen-colors">put-block-in-bowl-unseen-colors</option>
+              <option value="separating-piles-seen-colors">separating-piles-seen-colors</option>
+              <option value="separating-piles-unseen-colors">separating-piles-unseen-colors</option>
+              <option value="stack-block-pyramid-seq-seen-colors">stack-block-pyramid-seq-seen-colors</option>
+              <option value="stack-block-pyramid-seq-unseen-colors">stack-block-pyramid-seq-unseen-colors</option>
+              <option value="towers-of-hanoi-seq-seen-colors">towers-of-hanoi-seq-seen-colors</option>
+              <option value="towers-of-hanoi-seq-unseen-colors">towers-of-hanoi-seq-unseen-colors</option>
+              </select>
+            </div>
+            instance
+            <div class="select is-small">
+              <select id="multi-menu-instances" onchange="updateMultiVideo()">
+              <option value="01">01</option>
+              <option value="02">02</option>
+              <option value="03">03</option>
+              <option value="04" selected="selected">04</option>
+              <option value="05">05</option>
+              </select>
+            </div>
+            </br>
+            </br>
+
+            <video id="multi-task-result-video"
+                   controls
+                   muted
+                   autoplay
+                   loop
+                   width="100%">
+              <source src="https://cliport.github.io/media/results_web/packing-boxes-pairs-seen-colors-two_stream_full_clip_lingunet_lat_transporter-n1000-train/videos/multi-language-conditioned-packing-boxes-pairs-seen-colors-000004.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+        </div>
+        </br>
+        -->
+
+        <!-- <h3 class="title is-4">Affordance Predictions</h3>
+        <div class="content has-text-justified">
+          <p>
+            Examples of pick and place affordance predictions from ROSO in tasks from color, objects and unseen background color domain as well as real world data
+          </p>
+        </div>
+        <br/>
+        <img src="https://yusuke710.github.io/roso.github.io/media/images/affordance1.png" class="interpolation-image" 
+         alt="Interpolate start reference image."/>
+        <br/>
+        <br/>
+        <img src="https://yusuke710.github.io/roso.github.io/media/images/affordance2.png" class="interpolation-image" 
+         alt="Interpolate start reference image."/>
+        <br/>
+
+        <h3 class="title is-4">Failure Cases</h3>
+        <div class="content has-text-justified">
+          <p>
+            The variation in generated images from Stable Diffusion (SD), such as producing diverse interpretations for prompts like "Pepsi next box," has a destabilizing effect on CLIPort's success rate as the generated "Pepsi next box" is not aligned with the CLIPort's traininig set.
+          </p>
+        </div>
+        <br/>
+        <img src="https://yusuke710.github.io/roso.github.io/media/images/missalighment.png" class="interpolation-image" 
+         alt="Interpolate start reference image."/>
+        <br/>
+      </div>
+    </div>
+
+  </div>
+</section> -->
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-widescreen content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{Miyashita2023ROSO
+      author    = {Miyashita, Yusuke and Gahtidis, Dimitris and La, Colin and, Rabinowicz, Jeremy and Leitner, Jürgen},
+      title     = {ROSO: Improving Robotic Policy Inference via Synthetic Observations},
+      journal   = {ACRA},
+      year      = {2023},
+    }</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content has-text-centered">
+          <p>
+            Website template borrowed from <a href="https://github.com/nerfies/nerfies.github.io">NeRFies</a> made by <a href="https://keunhong.com/">Keunhong Park</a>. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
